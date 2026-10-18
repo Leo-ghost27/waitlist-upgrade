@@ -501,7 +501,6 @@ function ManagerReel() {
             style={{ background: "var(--gradient-accent)" }}
           />
           <video
-            src={managerReel.url}
             poster={managerReelPoster.url}
             controls
             autoPlay
@@ -510,7 +509,10 @@ function ManagerReel() {
             playsInline
             preload="metadata"
             className="block h-auto w-full"
-          />
+          >
+            <source src={managerReel.url} type="video/mp4" />
+            <source src={managerReelWebm.url} type="video/webm" />
+          </video>
         </div>
         <div className="flex flex-col gap-3">
           {[
