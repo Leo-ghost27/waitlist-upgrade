@@ -483,6 +483,72 @@ function Difference() {
   );
 }
 
+function ManagerReel() {
+  return (
+    <SectionShell
+      label="For Managers, Agents & Agencies"
+      title="Run your whole roster from one place."
+      sub="Kitscore isn't just scoring — it's the deal pipeline behind your creators, from outreach to payment."
+    >
+      <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-[minmax(0,320px)_1fr]">
+        <div
+          className="relative mx-auto w-full max-w-[320px] overflow-hidden rounded-2xl border border-border bg-surface"
+          style={{ boxShadow: "var(--shadow-elegant)" }}
+        >
+          <div
+            className="absolute inset-x-0 top-0 z-10 h-0.5"
+            style={{ background: "var(--gradient-accent)" }}
+          />
+          <video
+            src={managerReel.url}
+            poster={managerReelPoster.url}
+            controls
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="block h-auto w-full"
+          />
+        </div>
+        <div className="flex flex-col gap-3">
+          {[
+            {
+              h: "Every deal, one pipeline",
+              p: "See every deal's stage across the roster — outreach, pitched, negotiating, signed, paid.",
+            },
+            {
+              h: "Stay close to every creator",
+              p: "Direct messages, reusable templates, one calendar, and creator digests built in.",
+            },
+            {
+              h: "Pitch faster, on your brand",
+              p: "Pitch one brief to multiple creators, AI-assisted pitch & counter-offer drafts, your agency's name on every pitch.",
+            },
+          ].map((i) => (
+            <div
+              key={i.h}
+              className="flex items-start gap-3 rounded-md border border-border bg-surface px-4 py-3.5"
+            >
+              <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-primary" />
+              <div>
+                <div className="text-sm font-semibold">{i.h}</div>
+                <div className="text-[13px] text-muted-foreground">{i.p}</div>
+              </div>
+            </div>
+          ))}
+          <a
+            href="#waitlist"
+            className="mt-2 inline-block w-fit rounded-md border border-[rgba(123,111,232,0.4)] bg-primary-dim px-5 py-2.5 text-sm font-semibold text-primary-light transition-opacity hover:opacity-85"
+          >
+            Join the waitlist for roster tools
+          </a>
+        </div>
+      </div>
+    </SectionShell>
+  );
+}
+
 function SampleReports() {
   return (
     <SectionShell
