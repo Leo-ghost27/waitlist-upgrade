@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import managerReel from "@/assets/manager-reel.mp4.asset.json";
+import managerReelWebm from "@/assets/manager-reel.webm.asset.json";
 import managerReelPoster from "@/assets/manager-reel-poster.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
