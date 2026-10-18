@@ -51,6 +51,8 @@ function Landing() {
       <Divider />
       <Difference />
       <Divider />
+      <ManagerReel />
+      <Divider />
       <SampleReports />
       <Divider />
       <Pricing />
